@@ -18,7 +18,9 @@ repositories {
 
 dependencies {
     implementation "org.jetbrains:annotations:24.0.0"
-    implementation "com.github.SkriptLang:skript-reflect:2.4-dev1"
+    implementation("com.github.SkriptLang:skript-reflect:2.4-dev1") {
+        exclude group: "org.spigotmc", module: "spigot-api"
+    }
     compileOnly "org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT"
     implementation "com.github.SkriptLang:Skript:2.7.0"
     implementation "com.github.ItsRadiiX:Discord-Webhooks:3df5653b8b"
